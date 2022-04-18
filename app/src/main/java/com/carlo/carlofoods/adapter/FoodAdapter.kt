@@ -38,7 +38,7 @@ class FoodAdapter(val onClick: ClickedFood) : RecyclerView.Adapter<FoodAdapter.F
             foodItem.apply {
                 foodImage.load(food.image)
                 foodName.text = food.title
-                foodPrice.text = "$ ${food.price}" as String // useless cast
+                foodPrice.text = "Ksh ${food.price}" as String // useless cast
             }
         }
 
