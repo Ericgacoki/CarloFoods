@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/food_item_pay_background">
+
+
+    <Button
+        android:id="@+id/btnMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPlus"
+        app:layout_constraintEnd_toEndOf="@+id/btnPay"
+        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintStart_toStartOf="@+id/btnPay"
+        app:layout_constraintTop_toTopOf="@+id/btnPlus"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/btnPay"
+        app:layout_constraintEnd_toEndOf="@+id/btnPay"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnMinus"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85" />
+
+    <Button
+        android:id="@+id/btnPay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Pay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/teal_200"
+        app:layout_constraintBottom_toTopOf="@+id/totalPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clickedFoodTitle" />
+
+    <TextView
+        android:id="@+id/clickedFoodTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Pizza (Medium)"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnMinus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.166" />
+
+    <TextView
+        android:id="@+id/serving"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Serving: 1"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/totalPrice"
+        app:layout_constraintEnd_toStartOf="@+id/btnMinus"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="@+id/btnPay"
+        app:layout_constraintTop_toTopOf="@+id/totalPrice"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/totalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginVertical="24dp"
+        android:text="Price: $ 5.9"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlus"
+        app:layout_constraintEnd_toEndOf="@+id/btnPlus"
+        app:layout_constraintStart_toEndOf="@+id/serving"
+        app:layout_constraintTop_toBottomOf="@+id/clickedFoodTitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>
